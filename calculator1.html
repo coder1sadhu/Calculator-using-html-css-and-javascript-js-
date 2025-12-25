@@ -1,0 +1,197 @@
+<html>
+<head>
+    <title>
+        Calculator1
+    </title>
+    <script>
+        let n1, n2;
+        let op = '';
+        function dot(){
+            // alert(".");
+            document.getElementById('t1').value +=".";
+        }
+        function zero(){
+            // alert("0");
+            document.getElementById('t1').value +="0";
+        }
+        function one() {
+            // alert("1");
+            document.getElementById('t1').value += "1";
+        }
+        function two() {
+            // alert("2");
+            document.getElementById('t1').value += "2";
+        } function three() {
+            // alert("3");
+            document.getElementById('t1').value += "3";
+        } function four() {
+            // alert("4");
+            document.getElementById('t1').value += "4";
+        } function five() {
+            // alert("5");
+            document.getElementById('t1').value += "5";
+        } function six() {
+            // alert("6");
+            document.getElementById('t1').value += "6";
+        }
+        function seven() {
+            // alert("7");
+            document.getElementById('t1').value += "7";
+        } function eight() {
+            // alert("8");
+            document.getElementById('t1').value += "8";
+        } function nine() {
+            // alert("9");
+            document.getElementById('t1').value += "9";
+        }
+        function plus() {
+            n1 = parseInt(document.getElementById('t1').value);
+            alert(n1);
+            // op = '+';
+            document.getElementById('t1').value = "";
+        }
+        function minus() {
+            n1 = parseInt(document.getElementById('t1').value);
+            // alert(n1);
+            op = '-';
+            document.getElementById('t1').value = "";
+        }
+        function multiply() {
+            n1 = parseInt(document.getElementById('t1').value);
+            // alert(n1);
+            op = '*';
+            document.getElementById('t1').value = "";
+        }
+        function divi() {
+            n1= parseInt(document.getElementById('t1').value);
+            // alert(n1);
+            op='/';
+            document.getElementById('t1').value = "";
+        }
+        function equals() {
+            n2 = parseInt(document.getElementById('t1').value);
+            // alert(n2);
+            let z;
+            if (op == "+") {
+                z = n1 + n2;
+                document.getElementById('t1').value = z;
+            }
+            if (op == "-") {
+                z = n1 - n2;
+                document.getElementById('t1').value = z;
+            }
+            if(op == '*'){
+                z=n1*n2;
+                document.getElementById('t1').value = z;
+            }
+            if(op == '/'){
+                z=n1/n2;
+                document.getElementById('t1').value = z;
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-image: url('./images/calc4.jpg');
+            background-attachment: fixed;
+            background-size: cover;
+        }
+
+        .box {
+            margin: 35px 450px;
+            width: 400px;
+            height: 575px;
+            background: linear-gradient(120deg, rgb(21, 32, 6), rgba(255, 132, 0, 0.356));
+            border-radius: 10px;
+        }
+
+        .box h1 {
+            margin: 30px;
+            color: rgb(226, 173, 173);
+            font-size: 40px;
+            /* box-shadow: 5px 5px 10px rgb(225, 34, 34); */
+        }
+
+        .box h1:hover {
+            /* box-shadow: 5px 5px 10px rgb(64, 28, 180); */
+            color: aquamarine;
+            transform: scale(1.1);
+        }
+
+        .box input {
+            box-shadow: 5px 5px 10px rgb(225, 34, 34);
+            margin: 10px 5px;
+            border: 2px solid black;
+            border-radius: 5px;
+            height: 30px;
+            width: 350px;
+        }
+
+        .box input:hover {
+            color: black;
+            transform: scale(1.1);
+        }
+
+        .box button {
+            box-shadow: 5px 5px 10px rgb(228, 25, 25);
+            width: 70px;
+            height: 60px;
+            border: 2px solid black;
+            border-radius: 45px;
+            background: linear-gradient(45deg, rgb(151, 78, 182), rgb(115, 115, 184));
+            color: azure;
+            margin: 5px 10px;
+            font-size: 25px;
+        }
+
+        .box button:hover {
+            color: rgb(8, 21, 159);
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+<body>
+    <div align="center" class="box">
+        <h1 align="center">Digital Calculator</h1>
+        <input type="text" placeholder="0" id="t1">
+        <table>
+            <tr>
+                <td><button>%</button></td>
+                <td><button>C</button></td>
+                <td><button>CE</button></td>
+                <td><button>E</button></td>
+            </tr>
+            <tr>
+                <td><button>1/2</button></td>
+                <td><button>x<sup>2</sup></button></td>
+                <td><button>x<sup>3</sup></button></td>
+                <td><button onclick="divi()">/</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="seven()">7</button></td>
+                <td><button onclick="eight()">8</button></td>
+                <td><button onclick="nine()">9</button></td>
+                <td><button onclick="multiply()">x</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="four()">4</button></td>
+                <td><button onclick="five()">5</button></td>
+                <td><button onclick="six()">6</button></td>
+                <td><button onclick="minus()">-</button></td>
+            </tr>
+            <tr>
+                <td><button onclick="one()" id="b1">1</button></td>
+                <td><button onclick="two()">2</button></td>
+                <td><button onclick="three()">3</button></td>
+                <td><button onclick="plus()">+</button></td>
+            </tr>
+            <tr>
+                <td><button>+/-</button></td>
+                <td><button onclick="zero()">0</button></td>
+                <td><button onclick="dot()">.</button></td>
+                <td><button onclick="equals()">=</button></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
